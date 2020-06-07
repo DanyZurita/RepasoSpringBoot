@@ -1,5 +1,7 @@
 package org.formacio.component;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +26,15 @@ public class ServeiAlumnat {
 		}
 	}
 	
+	// Inicializar la base de datos con los dos alumnos: "Antonia" y "Joan"
+	@PostConstruct
+	public void init() {
+		String[] alumnos = { "Antonia", "Joan" };
+		int posicion = 1;
+		
+		for (String alumne : alumnos) {
+			repo.altaAlumne(posicion, alumne);
+			posicion += 1;
+		}
+	}
 }
