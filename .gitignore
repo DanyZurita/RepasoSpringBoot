@@ -25,3 +25,6 @@ nbdist/
 
 ##Eclipse
 .settings/
+
+##VScode
+.vscode/*
