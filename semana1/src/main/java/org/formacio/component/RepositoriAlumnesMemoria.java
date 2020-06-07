@@ -4,10 +4,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * A part del que sigui necessari per fer d'aquesta classe un component, no s'ha de 
  * modificar res mes d'aquesta classe
  */
+@Repository
 public class RepositoriAlumnesMemoria implements RepositoriAlumnes {
 
 	private Map<Integer, String> bbdd = new HashMap<>();
