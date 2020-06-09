@@ -14,10 +14,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RepositoriEscola {
 
-	
+	@PersistenceContext
+	private EntityManager em;
 	
 	public Curs carregaCurs(String nom) {
-		return null;
+		return em.find(Curs.class, nom);
 	}
 	
 	
